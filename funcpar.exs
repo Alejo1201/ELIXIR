@@ -5,7 +5,7 @@ defmodule Calculon do
   end
 end
 
-IO.puts Calculon.secret_add()
+IO.puts(fn a, b -> a + b end)
 
 defmodule Secrets do
   def secret_add(secret) do

@@ -7,6 +7,42 @@ defmodule Calculadora do
     n1 + n2
   end
 
+  def daily_rate(hourly_rate) do
+    # Please implement the daily_rate/1 function
+    hourly_rate * 8.0
+  end
+
+  def apply_discount(before_discount, discount) do
+    # Please implement the apply_discount/2 function
+    descuento = (before_discount * discount)/100
+    total = before_discount - descuento
+    IO.inspect(total)
+  end
+
+  def monthly_rate(hourly_rate, discount) do
+    # Please implement the monthly_rate/2 function
+    monthly_rate =((hourly_rate * 8)*22)
+    descuento = (monthly_rate * discount)/100
+    total= Float.ceil((monthly_rate - descuento))
+    IO.inspect(round(total))
+  end
+
+
+  # def days_in_budget(budget, hourly_rate, discount) do
+  #   # Please implement the days_in_budget/3 function
+  #   monthly_rate =((hourly_rate * 8)*22)
+
+  # end
+
+  def days_in_budget(budget, hourly_rate, discount) do
+    # Please implement the days_in_budget/3 function
+    monthly_rate =((hourly_rate * 8)*22)
+    descuento = (monthly_rate * discount)/100
+    total= Float.ceil((monthly_rate - descuento))
+    days_budget = ((budget * 22)/total)
+    IO.inspect(Float.floor(days_budget,1))
+  end
+
   def resta(n1, n2) do
     n1 - n2
   end
