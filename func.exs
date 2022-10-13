@@ -3,44 +3,18 @@
 
 
 defmodule Calculadora do
+
+  def prueba(:ok, _cadena) do
+    IO.puts("ME HAS PASADO EL ATOMO OK")
+  end
+
+  def prueba(atomo, cadena) do
+    IO.puts(cadena)
+  end
+
+
   def suma(n1, n2) do
     n1 + n2
-  end
-
-  def daily_rate(hourly_rate) do
-    # Please implement the daily_rate/1 function
-    hourly_rate * 8.0
-  end
-
-  def apply_discount(before_discount, discount) do
-    # Please implement the apply_discount/2 function
-    descuento = (before_discount * discount)/100
-    total = before_discount - descuento
-    IO.inspect(total)
-  end
-
-  def monthly_rate(hourly_rate, discount) do
-    # Please implement the monthly_rate/2 function
-    monthly_rate =((hourly_rate * 8)*22)
-    descuento = (monthly_rate * discount)/100
-    total= Float.ceil((monthly_rate - descuento))
-    IO.inspect(round(total))
-  end
-
-
-  # def days_in_budget(budget, hourly_rate, discount) do
-  #   # Please implement the days_in_budget/3 function
-  #   monthly_rate =((hourly_rate * 8)*22)
-
-  # end
-
-  def days_in_budget(budget, hourly_rate, discount) do
-    # Please implement the days_in_budget/3 function
-    monthly_rate =((hourly_rate * 8)*22)
-    descuento = (monthly_rate * discount)/100
-    total= Float.ceil((monthly_rate - descuento))
-    days_budget = ((budget * 22)/total)
-    IO.inspect(Float.floor(days_budget,1))
   end
 
   def resta(n1, n2) do
@@ -51,7 +25,7 @@ defmodule Calculadora do
     n1 * n2
   end
 
-  def dividir(_n1, n2) when n2 == 0 do
+  def dividir(_n1, n2 :div1) when n2 == 0 do
     :infinito
   end
 
@@ -59,6 +33,15 @@ defmodule Calculadora do
 
     n1 / n2
   end
+
+
+
+
+
+
+
+
+
 
   def alarm() do
     IO.puts ("Ding")
@@ -89,6 +72,44 @@ defmodule Calculadora do
   #   IO.puts "la multiplicacion entre #{n1} y #{n2} es : "
   #   n1 * n2
   # end
+
+
+
+
+
+
+
+
+
+
+  def daily_rate(hourly_rate) do
+    # Please implement the daily_rate/1 function
+    hourly_rate * 8.0
+  end
+
+  def apply_discount(before_discount, discount) do
+    # Please implement the apply_discount/2 function
+    descuento = (before_discount * discount)/100
+    total = before_discount - descuento
+    IO.inspect(total)
+  end
+
+  def monthly_rate(hourly_rate, discount) do
+    # Please implement the monthly_rate/2 function
+    monthly_rate =((hourly_rate * 8)*22)
+    descuento = (monthly_rate * discount)/100
+    total= Float.ceil((monthly_rate - descuento))
+    IO.inspect(round(total))
+  end
+
+  def days_in_budget(budget, hourly_rate, discount) do
+    # Please implement the days_in_budget/3 function
+    monthly_rate =((hourly_rate * 8)*22)
+    descuento = (monthly_rate * discount)/100
+    total= Float.ceil((monthly_rate - descuento))
+    days_budget = ((budget * 22)/total)
+    IO.inspect(Float.floor(days_budget,1))
+  end
 
 end
 

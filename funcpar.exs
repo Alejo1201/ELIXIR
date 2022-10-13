@@ -5,8 +5,6 @@ defmodule Calculon do
   end
 end
 
-IO.puts(fn a, b -> a + b end)
-
 defmodule Secrets do
   def secret_add(secret) do
     # Please implement the secret_add/1 function
@@ -43,3 +41,5 @@ defmodule Secrets do
     fn combi -> (secret_function2.(secret_function1.(combi))) end
   end
 end
+
+IO.inspect Calculon.operar(fn a, b -> a + b end)
